@@ -1,5 +1,5 @@
 // styles
-import './assets/styles/main.scss';
+import './assets/styles/fonts.css';
 // pages
 import Home from './pages/Home.tsx';
 import About from './pages/About.tsx';

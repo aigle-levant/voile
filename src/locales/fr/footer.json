@@ -1,0 +1,10 @@
+{
+    "links" : {
+        "home" : "Accueil",
+        "about" : "À propos",
+        "history" : "Histoire",
+        "contact" : "Contact"
+    },
+    "credits" : "Fait par Aigle",
+    "github" : "Accéder à mon GitHub"
+}

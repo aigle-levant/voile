@@ -1,0 +1,15 @@
+{
+    "buttons" : {
+        "submit" : "Soumettez",
+        "view" : "Regarder",
+        "learn-more" : "En savoir plus"
+    },
+    "language" : {
+        "english" : "English",
+        "french" : "Français"
+    },
+    "misc" : {
+        "back" : "Arrière",
+        "next" : "Suivant"
+    }
+}

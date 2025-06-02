@@ -1,0 +1,15 @@
+{
+    "buttons" : {
+        "submit" : "Submit",
+        "view" : "View",
+        "learn-more" : "Learn more"
+    },
+    "language" : {
+        "english" : "English",
+        "french" : "Français"
+    },
+    "misc" : {
+        "back" : "Back",
+        "next" : "Next"
+    }
+}
