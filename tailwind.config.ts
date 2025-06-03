@@ -2,15 +2,26 @@ import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        brand: '#1F1F1F',
-        soft: '#F4F0EC',
-        accent: '#9F7AEA',
+        wine: '#702632',
+        white: '#FFFFFA',
+        black: '#080705',
+        red: '#912F40',
+        grey: '#40434E',
       },
       fontFamily: {
-        sans: ['Switzer', 'sans-serif'],
+        title: ['Bebas Neue', 'sans-serif'],
+        body: ['Switzer-Regular', 'Open Sans', 'sans-serif'],
+        quote: ['Special Elite', 'monospace'],
+        heading: ['Besley', 'serif'],
+      },
+      fontSize: {
+        huge: "3.5rem",
+        big: "2.5rem",
+        medium: "1.5rem",
       },
     },
   },

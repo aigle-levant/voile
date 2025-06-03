@@ -1,10 +1,31 @@
-@import "tailwindcss";
-@import './assets/styles/fonts';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Besley:ital,wght@0,400..900;1,400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Special+Elite&display=swap');
 
+@layer base {
+  @font-face {
+    font-family: 'Switzer-Regular';
+    src: url('/fonts/Switzer-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Switzer-Bold';
+    src: url('/fonts/Switzer-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@import "tailwindcss";
 @import "tailwindcss/preflight";
 @import "tailwindcss/utilities";
-@import "tailwindcss/components";
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -113,13 +134,4 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
 }
