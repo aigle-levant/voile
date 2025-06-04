@@ -7,7 +7,7 @@
 
 [![portfolio](https://img.shields.io/badge/-Portfolio-4285F4?logo=google-docs&logoColor=white&style=for-the-badge)](https://aigle-levant.github.io/dev-portfolio/)
 [![linkedin](https://img.shields.io/badge/-LinkedIn-0055D4?logo=&logoColor=white&style=for-the-badge)](https://www.linkedin.com/in/prajanya-subramanian/)
-[![twitter](https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white)](x.com/aiglelevant)
+[![twitter](https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white)](https://www.x.com/aiglelevant)
 
 
 A website that [in simple terms] lets you check out outfits from different parts of our history [and when I say 'our history', it would also include yours].
