@@ -1,39 +1,78 @@
-// components
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle
-} from "../ui/navigation-menu";
+// libraries
+import { useState } from "react";
 
 export default function Navbar() {
-    return (
-        <header id="header" className="font-body w-100 fixed text-center">
-            <NavigationMenu viewport={false}>
-                <NavigationMenuList>
-                    <NavigationMenuItem>
-                        <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
-                            Voile
-                        </NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <NavigationMenuLink href="/about" className={navigationMenuTriggerStyle()}>
-                            About
-                        </NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <NavigationMenuLink href="/history" className={navigationMenuTriggerStyle()}>
-                            History
-                        </NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <NavigationMenuLink href="/contact" className={navigationMenuTriggerStyle()}>
-                            Contact
-                        </NavigationMenuLink>
-                    </NavigationMenuItem>
-                </NavigationMenuList>
-            </NavigationMenu>
-        </header>
-    )
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <header className="fixed top-4 left-1/2 z-50 w-[90%] max-w-4xl -translate-x-1/2 rounded-full bg-zinc-950 px-2 py-1 dark:bg-zinc-950">
+      <div className="relative flex items-center justify-center">
+        {/* theme switch */}
+        <div className="absolute left-4">
+          <button className="text-sm text-zinc-950 dark:text-zinc-50">
+            Theme
+          </button>
+        </div>
+
+        {/* Logo - center */}
+        <div>
+          <a href="/" className="text-lg text-zinc-950 dark:text-zinc-50">
+            Voile
+          </a>
+        </div>
+
+        {/* Hamburger - right */}
+        <div className="absolute right-4">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-zinc-900 focus:outline-none dark:text-zinc-100"
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+            >
+              {menuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {menuOpen && (
+        <div className="absolute top-20 left-1/2 z-40 w-[90%] max-w-4xl -translate-x-1/2 rounded-xl bg-white p-4 shadow-lg dark:bg-zinc-950">
+          <ul className="space-y-3 text-center text-base text-zinc-900 dark:text-zinc-100">
+            <li>
+              <a href="/about" className="block hover:underline">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="/history" className="block hover:underline">
+                History
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="block hover:underline">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
+    </header>
+  );
 }

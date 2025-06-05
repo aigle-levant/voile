@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Besley:ital,wght@0,400..900;1,400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Special+Elite&display=swap');
 
+@import "tailwindcss";
+/* @import "tailwindcss/preflight"; */
+@import "tailwindcss/utilities";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
 @layer base {
   @font-face {
     font-family: 'Switzer-Regular';
@@ -8,6 +19,7 @@
     font-display: swap;
     font-style: normal;
   }
+
   @font-face {
     font-family: 'Switzer-Bold';
     src: url('/fonts/Switzer-Bold.woff2') format('woff2');
@@ -15,17 +27,7 @@
     font-display: swap;
     font-style: normal;
   }
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
 }
-
-@import "tailwindcss";
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
 
 @custom-variant dark (&:is(.dark *));
 
