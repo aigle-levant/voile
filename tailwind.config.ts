@@ -13,12 +13,12 @@ const config: Config = {
         red: "#912F40",
         grey: "#40434E",
       },
-      fontFamily: {
-        title: ["Bebas Neue", "sans-serif"],
-        body: ["Switzer-Regular", "Open Sans", "sans-serif"],
-        quote: ["Special Elite", "monospace"],
-        heading: ["Besley", "serif"],
-      },
+      // fontFamily: {
+      //   title: ["Bebas Neue", "sans-serif"],
+      //   body: ["Switzer-Regular", "Open Sans", "sans-serif"],
+      //   quote: ["Special Elite", "monospace"],
+      //   heading: ["Besley", "serif"],
+      // },
       fontSize: {
         huge: "3.5rem",
         big: "2.5rem",

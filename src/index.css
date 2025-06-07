@@ -11,25 +11,30 @@ html {
   background: none;
 }
 
-@layer base {
-  @font-face {
-    font-family: 'Switzer-Regular';
-    src: url('/fonts/Switzer-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
-  }
+@font-face {
+  font-family: 'Switzer-Regular';
+  src: url('/fonts/Switzer-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: 'Switzer-Bold';
-    src: url('/fonts/Switzer-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-display: swap;
-    font-style: normal;
-  }
+@font-face {
+  font-family: 'Switzer-Bold';
+  src: url('/fonts/Switzer-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
 }
 
 @custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: 'Switzer-Regular', 'Open Sans', sans-serif;
+  --font-title: 'Bebas Neue', serif;
+  --font-quote: 'Special Elite', monospace;
+  --font-heading: 'Besley', serif;
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
