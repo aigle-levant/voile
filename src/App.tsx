@@ -8,10 +8,21 @@ import ContactUs from "./pages/ContactUs.tsx";
 import NotFound from "./pages/NotFound.tsx";
 // layouts
 import Default from "./layout/Default.tsx";
+import LoadingScreen from "./LoadingScreen.tsx";
 // libraries
 import { Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
 
 export default function App() {
+  const [loadingScreen, setLoadingScreen] = useState(true);
+  React.useEffect(() => {
+    setTimeout(() => {
+      setLoadingScreen(!loadingScreen);
+    }, 2000);
+  }, []);
+  if (loadingScreen) {
+    return <LoadingScreen />;
+  }
   return (
     <>
       <Routes>
