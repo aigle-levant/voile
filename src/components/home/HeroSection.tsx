@@ -3,7 +3,7 @@ import imgOne from "../../assets/images/home/hero-1.png";
 
 export default function HeroSection() {
   return (
-    <section className="hero relative w-full md:h-full">
+    <section className="hero relative w-full sm:h-full">
       <div className="hero-img-container absolute inset-0 top-0 z-0 w-full bg-transparent">
         <h1 className="z-20">Voile</h1>
         <p className="z-20">Lyon</p>

@@ -1,33 +1,61 @@
+// libraries
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faLinkedin,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
-    return (
-        <footer id="footer" className="flex flex-row place-items-center bg-zinc-950 p-5 text-justify no-underline font-body">
-            <div className="footer-left mr-6 ml-4 flex-col">
-                <ul className="text-zinc-50">
-                    <li>
-                        <a href="/about" className="no-underline">About Voile</a>
-                    </li>
-                    <li>
-                        <a href="/history" className="no-underline">History</a>
-                    </li>
-                    <li>
-                        <a href="/contact" className="no-underline">Contact us</a>
-                    </li>
-                </ul>
-            </div>
-            <div className="grow-3" />
-            <div className="footer-right flex-col pl-2 text-zinc-50">
-                <div className="pd-4">
-                    <p>Made by Aigle</p>
-                    <p>Check out my GitHub</p>
-                </div>
-                <div className="address mt-3">
-                    <p>4 étage,</p>
-                    <p>48 Descente Saint-Bernard,</p>
-                    <p>16869 Calais</p>
-                    <p>Phone: 02-782003912</p>
-                </div>
-            </div>
-        </footer>
-    )
+  return (
+    <footer
+      id="footer"
+      className="fixed bottom-0 z-50 mt-6 w-[100%] bg-zinc-50 p-2 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50"
+    >
+      <div id="footer-links-container" className="flex flex-col">
+        <nav
+          id="footer-links"
+          className="flex flex-row flex-wrap items-center justify-center gap-x-[2.5rem] gap-y-3 sm:gap-x-[3.5rem]"
+        >
+          <a
+            href="/about"
+            className="text-zinc-700 hover:underline dark:text-zinc-500"
+          >
+            About
+          </a>
+          <a
+            href="/history"
+            className="text-zinc-700 hover:underline dark:text-zinc-500"
+          >
+            History
+          </a>
+          <a
+            href="/contact"
+            className="text-zinc-700 hover:underline dark:text-zinc-500"
+          >
+            Contact us
+          </a>
+        </nav>
+        <div
+          id="social-media-links"
+          className="mt-6 flex flex-row justify-center gap-x-[2.5rem] gap-y-3 hover:text-zinc-50 sm:gap-x-[3.5rem]"
+        >
+          <a href="https://github.com/aigle-levant">
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <a href="https://www.linkedin.com/in/prajanya-subramanian/">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+          <a href="https://x.com/aiglelevant">
+            <FontAwesomeIcon icon={faXTwitter} />
+          </a>
+        </div>
+        <div id="attribution" className="mt-6 flex flex-row justify-center">
+          <p className="font-sans text-zinc-700 dark:text-zinc-500">
+            Made by Aigle
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
 }
