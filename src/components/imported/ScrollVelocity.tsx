@@ -120,7 +120,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
     });
 
     const directionFactor = useRef<number>(1);
-    useAnimationFrame((t, delta) => {
+    useAnimationFrame((delta) => {
       let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
       if (velocityFactor.get() < 0) {
@@ -148,7 +148,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
 
     return (
       <div
-        className={`${parallaxClassName} relative overflow-hidden bg-zinc-50 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50`}
+        className={`${parallaxClassName} relative overflow-hidden bg-zinc-950 text-zinc-50`}
         style={parallaxStyle}
       >
         <motion.div
