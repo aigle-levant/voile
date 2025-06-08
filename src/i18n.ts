@@ -14,7 +14,7 @@ i18n
     ns: ["common", "navbar", "loadingScreen", "about", "home", "footer"],
     defaultNS: "common",
     backend: {
-      loadPath: "../public/locales/{{lng}}/{{ns}}.json",
+      loadPath: "/locales/{{lng}}/{{ns}}.json",
     },
     interpolation: {
       escapeValue: false,
