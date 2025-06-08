@@ -1,23 +1,34 @@
 // libraries
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import i18n from "i18next";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const { t } = useTranslation("navbar");
   return (
     <header className="fixed top-4 left-1/2 z-50 w-[90%] max-w-4xl -translate-x-1/2 rounded-full bg-zinc-950 px-2 py-1 font-sans dark:bg-zinc-950">
       <div className="relative flex items-center justify-center">
         {/* theme switch */}
         <div className="absolute left-4">
-          <button className="text-sm text-zinc-950 dark:text-zinc-50">
-            Theme
+          <button
+            className="mx-4 text-sm text-zinc-950 dark:text-zinc-50"
+            onClick={() => i18n.changeLanguage("en")}
+          >
+            {t("en")}
+          </button>
+          <button
+            className="mx-4 text-sm text-zinc-950 dark:text-zinc-50"
+            onClick={() => i18n.changeLanguage("fr")}
+          >
+            {t("fr")}
           </button>
         </div>
 
         {/* Logo - center */}
         <div>
           <a href="/" className="text-lg text-zinc-950 dark:text-zinc-50">
-            Voile
+            {t("logo")}
           </a>
         </div>
 
@@ -57,17 +68,17 @@ export default function Navbar() {
           <ul className="space-y-3 text-center text-base text-zinc-900 dark:text-zinc-100">
             <li>
               <a href="/about" className="block hover:underline">
-                About
+                {t("about")}
               </a>
             </li>
             <li>
               <a href="/history" className="block hover:underline">
-                History
+                {t("history")}
               </a>
             </li>
             <li>
               <a href="/contact" className="block hover:underline">
-                Contact
+                {t("contact")}
               </a>
             </li>
           </ul>

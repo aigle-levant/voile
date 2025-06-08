@@ -5,8 +5,10 @@ import {
   faLinkedin,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation("footer");
   return (
     <footer
       id="footer"
@@ -21,19 +23,19 @@ export default function Footer() {
             href="/about"
             className="text-zinc-700 hover:underline dark:text-zinc-500"
           >
-            About
+            {t("about")}
           </a>
           <a
             href="/history"
             className="text-zinc-700 hover:underline dark:text-zinc-500"
           >
-            History
+            {t("history")}
           </a>
           <a
             href="/contact"
             className="text-zinc-700 hover:underline dark:text-zinc-500"
           >
-            Contact us
+            {t("contact")}
           </a>
         </nav>
         <div
@@ -52,7 +54,7 @@ export default function Footer() {
         </div>
         <div id="attribution" className="mt-6 flex flex-row justify-center">
           <p className="font-sans text-zinc-700 dark:text-zinc-500">
-            Made by Aigle
+            {t("credits")}
           </p>
         </div>
       </div>

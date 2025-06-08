@@ -1,17 +1,20 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import HttpBackend from 'i18next-http-backend';
+// libraries
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import Backend from "i18next-http-backend";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 i18n
-  .use(HttpBackend)
+  .use(Backend)
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    lng: 'en',
-    fallbackLng: 'en',
-    ns: ['navbar'],
-    defaultNS: 'navbar',
+    lng: "en",
+    fallbackLng: "en",
+    ns: ["common", "navbar", "loadingScreen", "about", "home", "footer"],
+    defaultNS: "common",
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
+      loadPath: "../public/locales/{{lng}}/{{ns}}.json",
     },
     interpolation: {
       escapeValue: false,
