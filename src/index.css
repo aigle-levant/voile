@@ -34,6 +34,17 @@ html {
   --font-title: 'Bebas Neue', serif;
   --font-quote: 'Special Elite', monospace;
   --font-heading: 'Besley', serif;
+  --animate-marquee: marquee 20s ease infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translatex(0%)
+    }
+
+    100% {
+      transform: translatex(-50%)
+    }
+  }
 }
 
 @theme inline {

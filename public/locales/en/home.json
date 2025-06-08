@@ -1,3 +1,13 @@
 {
-  "marquee": "AESTHETIC EN VOGUE STYLE HAUTE-COUTURE HOI POLLOI GAUCHE FASHION ENSEMBLE FAD"
+  "marquee": [
+    "AESTHETIC",
+    "EN VOGUE",
+    "STYLE",
+    "HAUTE-COUTURE",
+    "HOI POLLOI",
+    "GAUCHE",
+    "FASHION",
+    "ENSEMBLE",
+    "FAD"
+  ]
 }
