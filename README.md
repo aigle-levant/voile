@@ -73,10 +73,10 @@ Start the server
 
 ### Phase 1
 
-- [] Custom navbar
-- [] Custom footer
-- [] Hero Section
-- [] Marquee
+- [X] Custom navbar
+- [X] Custom footer
+- [X] Hero Section
+- [X] Marquee
 - [] Animated Section + Quote
 - [] Body text
 - [] Gallery
