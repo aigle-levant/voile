@@ -6,7 +6,7 @@ import "../assets/styles/marquee.css";
 
 export default function Home() {
   return (
-    <main className="main">
+    <main className="main overflow-x-hidden">
       <HeroSection />
       <Marquee />
     </main>

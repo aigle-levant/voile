@@ -85,7 +85,6 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
     numCopies,
     velocityMapping,
     parallaxClassName,
-    scrollerClassName,
     parallaxStyle,
     scrollerStyle,
   }: VelocityTextProps) {
@@ -138,9 +137,9 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
     for (let i = 0; i < numCopies!; i++) {
       spans.push(
         <span
-          className={`flex-shrink-0 ${className}`}
           key={i}
-          ref={i === 0 ? copyRef : null}
+          ref={copyRef}
+          className={`${className} "text-inherit font-title sm:text-6xl" pointer-events-none invisible absolute flex-shrink-0 px-4 text-5xl font-extralight tracking-normal whitespace-nowrap`}
         >
           {children}
         </span>,
@@ -149,11 +148,11 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
 
     return (
       <div
-        className={`${parallaxClassName} relative overflow-hidden`}
+        className={`${parallaxClassName} relative overflow-hidden bg-zinc-50 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50`}
         style={parallaxStyle}
       >
         <motion.div
-          className={`${scrollerClassName} flex text-center font-sans text-4xl font-bold tracking-[-0.02em] whitespace-nowrap drop-shadow md:text-[5rem] md:leading-[5rem]`}
+          className={`font-title inline-flex items-center px-5 text-5xl font-extralight tracking-normal whitespace-nowrap sm:text-6xl`}
           style={{ x, ...scrollerStyle }}
         >
           {spans}
@@ -179,7 +178,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
           parallaxStyle={parallaxStyle}
           scrollerStyle={scrollerStyle}
         >
-          {text}&nbsp;
+          {text};
         </VelocityText>
       ))}
     </section>

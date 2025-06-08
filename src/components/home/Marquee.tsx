@@ -4,13 +4,14 @@ import ScrollVelocity from "../imported/ScrollVelocity.tsx";
 import { useTranslation } from "react-i18next";
 
 export default function Marquee() {
-  const { t } = useTranslation("navbar");
+  const { t } = useTranslation("home");
   return (
-    <section
-      id="marquee"
-      className="w-full bg-zinc-50 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50"
-    >
-      <ScrollVelocity texts={[t("marquee")]} velocity={100} />
+    <section id="marquee" className="w-full">
+      <ScrollVelocity
+        texts={[t("marquee")]}
+        velocity={100}
+        className="relative w-full overflow-hidden bg-zinc-950 py-10 text-zinc-50"
+      />
     </section>
   );
 }
