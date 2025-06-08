@@ -1,7 +1,10 @@
 // components
 import AnimatedComponent from "./AnimatedComponent";
+// libraries
+import { useTranslation } from "react-i18next";
 
 export default function AnimatedSection() {
+  const { t } = useTranslation("home");
   return (
     <section
       id="animated"
@@ -10,7 +13,7 @@ export default function AnimatedSection() {
       <div className="flex flex-row">
         <div id="quote">
           <p className="font-quote px-2 text-xl sm:ml-4 sm:text-3xl">
-            "Fashions fade, style is eternal" - Yves Saint-Laurent
+            {t("quote")}
           </p>
         </div>
         <div id="video-card" className="my-2 ml-10 -rotate-30 sm:-rotate-20">
