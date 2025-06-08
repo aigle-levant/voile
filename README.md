@@ -28,7 +28,11 @@ Demo ->
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![image](https://github.com/user-attachments/assets/bcf65e14-1dfd-4bb1-89ef-af495ce8795f)
+
+![image](https://github.com/user-attachments/assets/cf50de13-68cf-4d29-995f-72d3c44dc4ef)
+
+![image](https://github.com/user-attachments/assets/04b1e6ad-e96d-407f-90f3-f19e6efd0b6f)
 
 
 ## Tech Stack
@@ -73,10 +77,10 @@ Start the server
 
 ### Phase 1
 
-- [] Custom navbar
-- [] Custom footer
-- [] Hero Section
-- [] Marquee
+- [X] Custom navbar
+- [X] Custom footer
+- [X] Hero Section
+- [X] Marquee
 - [] Animated Section + Quote
 - [] Body text
 - [] Gallery
