@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="relative bottom-0 z-50 mt-6 w-[100%] bg-zinc-50 p-2 font-sans text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50"
+      className="relative bottom-0 z-50 w-full bg-zinc-50 p-2 font-sans text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50"
     >
       <div id="footer-links-container" className="flex flex-col">
         <nav
