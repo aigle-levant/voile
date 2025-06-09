@@ -4,6 +4,7 @@ import Marquee from "../components/home/Marquee.tsx";
 import AnimatedSection from "@/components/home/AnimatedSection.tsx";
 import Body from "@/components/home/Body.tsx";
 import ImageGallery from "@/components/home/ImageGallery.tsx";
+import Newsletter from "@/components/home/Newsletter.tsx";
 // style
 import "../assets/styles/marquee.css";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <AnimatedSection />
       <Body />
       <ImageGallery />
+      <Newsletter />
     </main>
   );
 }
