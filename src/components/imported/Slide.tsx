@@ -1,10 +1,6 @@
 // libraries
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-// styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 // images
 import imageOne from "../../assets/images/home/hero-2.png";
 import imageTwo from "../../assets/images/home/hero-3.png";
