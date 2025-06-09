@@ -17,7 +17,6 @@ This website is hosted by Vercel.
 
 Demo -> https://voile.vercel.app/
 
-
 ## Features
 
 - Light/dark mode toggle
@@ -28,24 +27,33 @@ Demo -> https://voile.vercel.app/
 
 ## Screenshots
 
-### Tablet
+### English version
 
-![image](https://github.com/user-attachments/assets/0f7b4df8-0bd2-42ad-9e09-98ac5ad07cee)
+#### Desktop
 
-![image](https://github.com/user-attachments/assets/a4491238-a09a-453c-803c-fd90891f47a4)
+![image](https://github.com/user-attachments/assets/61a6825e-e9cc-4538-881c-03a39b17fb21)
 
-### Mobile
+![image](https://github.com/user-attachments/assets/19847783-737b-4ef2-926e-c94e5ce2dfa9)
 
-![image](https://github.com/user-attachments/assets/e359f6f6-cfb0-4b92-8f64-d9deaab238fc)
+#### Mobile
 
-### Desktop
+![image](https://github.com/user-attachments/assets/de0cde5e-8416-4a90-91a1-4a24a4078281)
 
-![image](https://github.com/user-attachments/assets/fb895779-5ff2-43a6-b3f6-194e88ce07c0)
+![image](https://github.com/user-attachments/assets/c0d9777e-88f7-481c-8031-a28e0b229ff7)
 
-![image](https://github.com/user-attachments/assets/9fad0332-529f-41e0-aba6-bf19e15b3e95)
+### Version française
 
-![image](https://github.com/user-attachments/assets/c4468939-8b57-482e-924b-870bb874802f)
+#### Desktop
 
+![image](https://github.com/user-attachments/assets/867a620c-8db6-45a1-9b2e-f1ffe1cf3a9f)
+
+![image](https://github.com/user-attachments/assets/8bd0e26a-9f6f-4883-928f-ac2e52e874ab)
+
+#### Mobile
+
+![image](https://github.com/user-attachments/assets/4c458ccd-722c-47ee-9104-f3a70ab50013)
+
+![image](https://github.com/user-attachments/assets/e81ffe73-a023-469c-8020-3bc566d2a527)
 
 ## Tech Stack
 
@@ -53,7 +61,7 @@ Demo -> https://voile.vercel.app/
 
 **UI/UX** - TailwindCSS, shadcn/ui, and a lil bit of SCSS to spice it up.
 
-**Functionalities** - i18next [translation], Framer Motion and React Spring [animation]
+**Functionalities** - i18next [translation], Framer Motion and React Spring [animation], DeepL translate
 
 **APIs** - Google Maps API, MET API [those guys who host MET Gala], Unsplash API
 
@@ -95,6 +103,9 @@ Start the server
 - [X] Marquee
 - [X] Animated Section + Quote
 - [X] Body text
-- [] Gallery
-- [] Newsletter CTA
+- [X] Gallery
+- [X] Newsletter CTA
 
+### Phase 2
+
+- TBA
