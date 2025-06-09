@@ -1,10 +1,14 @@
+// libraries
+import { useTranslation } from "react-i18next";
+
 export default function Newsletter() {
+  const { t } = useTranslation("home");
   return (
     <section
       id="newsletter"
       className="my-4 flex flex-col items-center justify-center p-4"
     >
-      <p className="font-heading text-2xl">Subscribe to our newsletter</p>
+      <p className="font-heading text-2xl">{t("newsletter")}</p>
       <form className="my-4 flex flex-row items-center">
         <input
           className="mx-4 rounded-md border-zinc-700 bg-zinc-800 px-4 py-2 text-zinc-300 placeholder:text-zinc-600"
@@ -15,7 +19,7 @@ export default function Newsletter() {
           type="submit"
           className="rounded-md bg-zinc-950 px-4 py-2 font-sans text-zinc-50 dark:bg-zinc-50 dark:text-zinc-950"
         >
-          Submit
+          {t("button")}
         </button>
       </form>
     </section>
