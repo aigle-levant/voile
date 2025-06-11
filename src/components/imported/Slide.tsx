@@ -1,34 +1,26 @@
 // libraries
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-// images
-import imageOne from "../../assets/images/home/hero-2.png";
-import imageTwo from "../../assets/images/home/hero-3.png";
-import imageThree from "../../assets/images/home/hero-4.png";
 
-export default function Slide() {
-  const gallery = [{ img: imageOne }, { img: imageTwo }, { img: imageThree }];
+export default function Slide({ images }: { images: string[] }) {
   return (
-    <>
-      <Swiper
-        slidesPerView={2}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-        {gallery.map((image, i) => (
-          <SwiperSlide key={i}>
-            <img
-              src={image.img}
-              alt={`Slide ${i + 1}`}
-              className="h-[50%] w-full object-cover"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </>
+    <Swiper
+      slidesPerView={2}
+      spaceBetween={30}
+      pagination={{ clickable: true }}
+      modules={[Pagination]}
+      className="mySwiper"
+    >
+      {images.map((img, i) => (
+        <SwiperSlide key={i}>
+          <img
+            src={img}
+            alt={`Slide ${i + 1}`}
+            loading="lazy"
+            className="h-[50%] w-full object-cover"
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 }
