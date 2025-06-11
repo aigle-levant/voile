@@ -23,7 +23,6 @@ export default function Footer() {
           <NavLink to="/about" className="block hover:underline">
             {t("about")}
           </NavLink>
-          {t("about")}
           <NavLink to="/history" className="block hover:underline">
             {t("history")}
           </NavLink>
