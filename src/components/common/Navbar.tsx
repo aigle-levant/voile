@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -67,19 +68,19 @@ export default function Navbar() {
         <div className="absolute top-20 left-1/2 z-40 w-[90%] max-w-4xl -translate-x-1/2 rounded-xl bg-white p-4 shadow-lg dark:bg-zinc-950">
           <ul className="space-y-3 text-center text-base text-zinc-900 dark:text-zinc-100">
             <li>
-              <a href="/about" className="block hover:underline">
+              <NavLink to="/about" className="block hover:underline">
                 {t("about")}
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/history" className="block hover:underline">
+              <NavLink to="/history" className="block hover:underline">
                 {t("history")}
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/contact" className="block hover:underline">
+              <NavLink to="/contact" className="block hover:underline">
                 {t("contact")}
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

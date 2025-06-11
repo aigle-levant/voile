@@ -6,6 +6,7 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   const { t } = useTranslation("footer");
@@ -19,24 +20,16 @@ export default function Footer() {
           id="footer-links"
           className="flex flex-row flex-wrap items-center justify-center gap-x-[2.5rem] gap-y-3 sm:gap-x-[3.5rem]"
         >
-          <a
-            href="/about"
-            className="text-zinc-700 hover:underline dark:text-zinc-500"
-          >
+          <NavLink to="/about" className="block hover:underline">
             {t("about")}
-          </a>
-          <a
-            href="/history"
-            className="text-zinc-700 hover:underline dark:text-zinc-500"
-          >
+          </NavLink>
+          {t("about")}
+          <NavLink to="/history" className="block hover:underline">
             {t("history")}
-          </a>
-          <a
-            href="/contact"
-            className="text-zinc-700 hover:underline dark:text-zinc-500"
-          >
+          </NavLink>
+          <NavLink to="/contact" className="block hover:underline">
             {t("contact")}
-          </a>
+          </NavLink>
         </nav>
         <div
           id="social-media-links"
