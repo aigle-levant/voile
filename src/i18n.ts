@@ -11,7 +11,15 @@ i18n
   .init({
     lng: "en",
     fallbackLng: "en",
-    ns: ["common", "navbar", "loadingScreen", "about", "home", "footer"],
+    ns: [
+      "common",
+      "navbar",
+      "loadingScreen",
+      "about",
+      "home",
+      "footer",
+      "contact",
+    ],
     defaultNS: "common",
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json",

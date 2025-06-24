@@ -1,0 +1,19 @@
+{
+  "begin": "Avez-vous une question concernant les affaires ou souhaitez-vous partager vos pensées avec notre équipe?",
+  "topic": "Thème",
+  "customer": "Demande du client",
+  "service": "Services",
+  "work": "Demande de travail",
+  "sub": "Sujet",
+  "prefix": "S'adresser à",
+  "mr": "M.",
+  "mrs": "Mme.",
+  "miss": "Mlle.",
+  "mx": "Mx.",
+  "prefix-none": "Je ne préfère pas dire",
+  "name": "Nom et prénom",
+  "email": "Adresse email",
+  "phone": "Numéro de téléphone",
+  "message": "Laissez-nous un message",
+  "submit": "Soumettez"
+}

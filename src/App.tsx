@@ -30,7 +30,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="history" element={<History />} />
-          <Route path="contact-us" element={<ContactUs />} />
+          <Route path="contact" element={<ContactUs />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

@@ -1,0 +1,19 @@
+{
+  "begin": "Have a query regarding business or want to share your thoughts to our team?",
+  "topic": "Topic",
+  "customer": "Customer inquiry",
+  "service": "Services",
+  "work": "Work request",
+  "sub": "Subject",
+  "prefix": "Addresssing to",
+  "mr": "Mr.",
+  "mrs": "Mrs.",
+  "miss": "Miss",
+  "mx": "Mx.",
+  "prefix-none": "I'd rather not say",
+  "name": "Full name",
+  "email": "Email address",
+  "phone": "Phone number",
+  "message": "Leave us a message",
+  "submit": "Submit"
+}
