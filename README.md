@@ -105,4 +105,7 @@ Start the server
 
 ### Phase 2
 
-- TBA
+- [X] About page
+- [X] Contact form
+- [ ] Google Maps
+- [ ] Services
