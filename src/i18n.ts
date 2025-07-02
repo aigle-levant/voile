@@ -19,6 +19,7 @@ i18n
       "home",
       "footer",
       "contact",
+      "notFound",
     ],
     defaultNS: "common",
     backend: {
