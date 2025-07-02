@@ -3,6 +3,7 @@
 @import "tailwindcss";
 /* @import "tailwindcss/preflight"; */
 @import "tailwindcss/utilities";
+@import 'leaflet/dist/leaflet.css';
 
 body,
 html {
