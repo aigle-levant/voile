@@ -20,6 +20,7 @@ i18n
       "footer",
       "contact",
       "notFound",
+      "history",
     ],
     defaultNS: "common",
     backend: {

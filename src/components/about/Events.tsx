@@ -1,5 +1,5 @@
 // components
-import TimelinePart from "../TimelinePart.tsx";
+import TimelinePart from "../ui/TimelinePart.tsx";
 import Slide from "../imported/Slide.tsx";
 // images
 import imageOne from "../../assets/images/about/about-gallery-1.jpg";
