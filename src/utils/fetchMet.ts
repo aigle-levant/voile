@@ -28,7 +28,7 @@ export async function fetchMet(
   // fetch stuff from met api
   const query = `${cKey} ${pKey} ${fKey}`;
   const response = await fetch(
-    `/met/collection/v1/search?q=${encodeURIComponent(query)}&hasImages=true&departmentId=8`,
+    `/api/metproxy?endpoint=search&q=${query}&hasImages=true&departmentId=8`,
   );
   // handle fail
   if (!response.ok) {
@@ -54,7 +54,7 @@ export async function fetchMet(
   const results: Artifact[] = [];
 
   for (const id of objectIDs) {
-    const objectResponse = await fetch(`/met/collection/v1/objects/${id}`);
+    const objectResponse = await fetch(`/api/metproxy?endpoint=objects/${id}`);
     const obj = await objectResponse.json();
 
     if (obj.primaryImageSmall) {
