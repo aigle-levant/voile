@@ -1,22 +1,23 @@
-import type { VercelRequest, VercelResponse } from "@vercel/node";
+import type { NextApiRequest, NextApiResponse } from "next";
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
-  const { endpoint = "", ...restQuery } = req.query;
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  const { endpoint } = req.query;
 
-  if (!endpoint || typeof endpoint !== "string") {
-    return res.status(400).json({ error: "Missing or invalid endpoint" });
+  if (!endpoint) {
+    return res.status(400).json({ error: "Missing endpoint" });
   }
 
-  const searchParams = new URLSearchParams(
-    restQuery as Record<string, string>,
-  ).toString();
-  const url = `https://collectionapi.metmuseum.org/public/collection/v1/${endpoint}?${searchParams}`;
+  const url = `https://collectionapi.metmuseum.org/public/collection/v1/${endpoint}`;
 
   try {
-    const fetchRes = await fetch(url);
-    const data = await fetchRes.json();
-    return res.status(fetchRes.status).json(data);
+    const apiRes = await fetch(url);
+    const data = await apiRes.json();
+    return res.status(200).json(data);
   } catch (err) {
-    return res.status(500).json({ error: "Proxy error", detail: err });
+    console.error("Error fetching from MET:", err);
+    return res.status(500).json({ error: "Failed to fetch from MET" });
   }
 }
