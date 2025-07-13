@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/select";
 // components
 import type { FilterProps } from "@/utils/types";
-import { contKeys } from "@/utils/keywords";
 
 export default function Filter({ currentPeriod, onPeriodChange }: FilterProps) {
   return (
@@ -22,10 +21,10 @@ export default function Filter({ currentPeriod, onPeriodChange }: FilterProps) {
         <SelectContent>
           <SelectGroup>
             <SelectLabel>Period</SelectLabel>
-            <SelectItem value="20xx">20XX</SelectItem>
-            <SelectItem value="19xx">19XX</SelectItem>
-            <SelectItem value="18xx">18XX</SelectItem>
-            <SelectItem value="14xx">14XX</SelectItem>
+            <SelectItem value="20XX">20XX</SelectItem>
+            <SelectItem value="19XX">19XX</SelectItem>
+            <SelectItem value="18XX">18XX</SelectItem>
+            <SelectItem value="14XX">14XX</SelectItem>
           </SelectGroup>
         </SelectContent>
       </Select>

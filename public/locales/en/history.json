@@ -1,3 +1,8 @@
 {
-  "intro": "Explore fashion with Voile"
+  "intro": "Explore fashion with Voile",
+  "asia": "Asia",
+  "europe": "Europe",
+  "africa": "Africa",
+  "oceania": "Oceania",
+  "americas": "The Americas"
 }

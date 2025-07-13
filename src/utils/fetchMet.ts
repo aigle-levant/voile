@@ -1,4 +1,3 @@
-// GET
 // components
 import { contKeys, periodKeys, fashionKeys } from "./keywords";
 import { type Artifact } from "./types";
@@ -12,26 +11,50 @@ export async function fetchMet(
   period: string,
   count = 8,
 ): Promise<Artifact[]> {
+  // list keys
+  const cList = contKeys[continent] || [];
+  const pList = periodKeys[period] || [];
+  const fList = fashionKeys;
+  // check for missing keywords
+  if (!cList.length || !pList.length) {
+    console.warn("Missing keywords for", continent, period);
+    return [];
+  }
   // randomize
-  const cKey = random(contKeys[continent]);
-  const pKey = random(periodKeys[period]);
-  const fKey = random(fashionKeys);
+  const cKey = random(cList);
+  const pKey = random(pList);
+  const fKey = random(fList);
 
   // fetch stuff from met api
   const query = `${cKey} ${pKey} ${fKey}`;
   const response = await fetch(
-    `https://collectionapi.metmuseum.org/public/collection/v1/search?q=${encodeURIComponent(query)}&hasImages=true&departmentId=8`,
+    `/met/collection/v1/search?q=${encodeURIComponent(query)}&hasImages=true&departmentId=8`,
   );
-  const data = await response.json();
+  // handle fail
+  if (!response.ok) {
+    console.error("Fetch failed with status", response.status);
+    return [];
+  }
 
-  if ((!data)?.objectIDs?.length) return [];
+  let data: { objectIDs?: number[] | null } | undefined;
+
+  try {
+    data = await response.json();
+  } catch (error) {
+    console.log("Failed to parse JSON:", error);
+    return [];
+  }
+
+  if (!Array.isArray(data?.objectIDs) || data.objectIDs.length === 0) {
+    console.log("No objectIDs returned for query:", query);
+    return [];
+  }
+
   const objectIDs = data.objectIDs.slice(0, count * 3);
   const results: Artifact[] = [];
 
   for (const id of objectIDs) {
-    const objectResponse = await fetch(
-      `https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`,
-    );
+    const objectResponse = await fetch(`/met/collection/v1/objects/${id}`);
     const obj = await objectResponse.json();
 
     if (obj.primaryImageSmall) {
@@ -46,5 +69,6 @@ export async function fetchMet(
     }
     if (results.length >= count) break;
   }
+  console.log(results);
   return results;
 }

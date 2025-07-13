@@ -10,4 +10,13 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    proxy: {
+      "/met": {
+        target: "https://collectionapi.metmuseum.org",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/met/, "/public"),
+      },
+    },
+  },
 });

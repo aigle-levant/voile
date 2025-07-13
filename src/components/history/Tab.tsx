@@ -1,8 +1,11 @@
 // components
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { type TabProps } from "@/utils/types.ts";
+// libraries
+import { useTranslation } from "react-i18next";
 
 export default function Tab({ currentContinent, onContinentChange }: TabProps) {
+  const { t } = useTranslation("history");
   return (
     <>
       <Tabs
@@ -11,11 +14,11 @@ export default function Tab({ currentContinent, onContinentChange }: TabProps) {
         className="w-[400px]"
       >
         <TabsList>
-          <TabsTrigger value="asia">Asia</TabsTrigger>
-          <TabsTrigger value="europe">Europe</TabsTrigger>
-          <TabsTrigger value="africa">Africa</TabsTrigger>
-          <TabsTrigger value="america">The Americas</TabsTrigger>
-          <TabsTrigger value="oceania">Oceania</TabsTrigger>
+          <TabsTrigger value="asia">{t("asia")}</TabsTrigger>
+          <TabsTrigger value="europe">{t("europe")}</TabsTrigger>
+          <TabsTrigger value="africa">{t("africa")}</TabsTrigger>
+          <TabsTrigger value="america">{t("americas")}</TabsTrigger>
+          <TabsTrigger value="oceania">{t("oceania")}</TabsTrigger>
         </TabsList>
         <TabsContent value="asia"></TabsContent>
         <TabsContent value="europe"></TabsContent>

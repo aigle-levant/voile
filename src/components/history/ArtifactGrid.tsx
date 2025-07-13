@@ -1,11 +1,11 @@
 // components
-import { type ArtifactCardProps, type Artifact } from "@/utils/types";
+import { type Artifact, type ArtifactGridProps } from "@/utils/types";
 import ArtifactCard from "./ArtifactCard";
 import { fetchMet } from "@/utils/fetchMet";
 // libraries
 import { useEffect, useState } from "react";
 
-export default function ArtifactGrid({ continent, period }: ArtifactCardProps) {
+export default function ArtifactGrid({ continent, period }: ArtifactGridProps) {
   const [artifactVar, setArtifacts] = useState<Artifact[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -20,6 +20,7 @@ export default function ArtifactGrid({ continent, period }: ArtifactCardProps) {
       loadArtis();
     }
   }, [continent, period]);
+  console.log("Artifacts received:", artifactVar);
   if (loading)
     return (
       <p className="font-sans text-2xl text-zinc-950 dark:text-zinc-50">
@@ -30,7 +31,7 @@ export default function ArtifactGrid({ continent, period }: ArtifactCardProps) {
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
       {artifactVar.map((artifact) => (
-        <ArtifactCard key={artifact.objectID} artifactVar={artifact} />
+        <ArtifactCard key={artifact.objectID} artifact={artifact} />
       ))}
     </div>
   );

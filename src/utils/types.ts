@@ -12,6 +12,11 @@ export type ArtifactCardProps = {
   artifact: Artifact;
 };
 
+export type ArtifactGridProps = {
+  continent: string;
+  period: string;
+};
+
 export type Artifact = {
   objectID: number;
   title: string;
