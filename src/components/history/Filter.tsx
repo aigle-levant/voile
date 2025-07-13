@@ -8,11 +8,14 @@ import {
   SelectGroup,
   SelectLabel,
 } from "@/components/ui/select";
+// components
+import type { FilterProps } from "@/utils/types";
+import { contKeys } from "@/utils/keywords";
 
-export default function Filter() {
+export default function Filter({ currentPeriod, onPeriodChange }: FilterProps) {
   return (
-    <>
-      <Select>
+    <div className="my-6">
+      <Select value={currentPeriod} onValueChange={onPeriodChange}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Select a period" />
         </SelectTrigger>
@@ -26,6 +29,6 @@ export default function Filter() {
           </SelectGroup>
         </SelectContent>
       </Select>
-    </>
+    </div>
   );
 }
