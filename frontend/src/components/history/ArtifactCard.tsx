@@ -1,7 +1,7 @@
 // libraries
 import { useState } from "react";
 // components
-import { type ArtifactCardProps } from "@/utils/types";
+import { type ArtifactCardProps } from "../../utils/types";
 
 export default function ArtifactCard({ artifact }: ArtifactCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -16,7 +16,7 @@ export default function ArtifactCard({ artifact }: ArtifactCardProps) {
       >
         <div className="absolute inset-0 max-h-full w-full overflow-hidden rounded bg-white shadow backface-hidden">
           <img
-            src={artifact.primaryImageSmall}
+            src={artifact.primaryImage}
             alt={artifact.title}
             className="h-auto w-full rounded-xl"
           />
@@ -28,7 +28,8 @@ export default function ArtifactCard({ artifact }: ArtifactCardProps) {
             {artifact.artistDisplayName || "Unknown"}
           </p>
           <p className="text-xs">{artifact.objectDate}</p>
-          <p className="text-xs">{artifact.objectName}</p>
+          <p className="text-xs">{artifact.country}</p>
+          <p className="text-xs">{artifact.culture}</p>
         </div>
       </div>
     </div>

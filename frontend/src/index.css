@@ -14,7 +14,7 @@ html {
 
 @font-face {
   font-family: 'Switzer-Regular';
-  src: url('/fonts/Switzer-Regular.woff2') format('woff2');
+  src: url('../public/fonts/Switzer-Regular.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -22,7 +22,7 @@ html {
 
 @font-face {
   font-family: 'Switzer-Bold';
-  src: url('/fonts/Switzer-Bold.woff2') format('woff2');
+  src: url('../public/fonts/Switzer-Bold.woff2') format('woff2');
   font-weight: 700;
   font-display: swap;
   font-style: normal;

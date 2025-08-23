@@ -13,15 +13,16 @@ export type ArtifactCardProps = {
 };
 
 export type ArtifactGridProps = {
-  continent: string;
-  period: string;
+  artifacts: Artifact[];
 };
 
 export type Artifact = {
   objectID: number;
+  primaryImage: string;
   title: string;
-  primaryImageSmall: string;
+  culture: string;
+  period: string;
   artistDisplayName: string;
   objectDate: string;
-  objectName: string;
+  country: string;
 };
